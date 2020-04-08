@@ -52,15 +52,16 @@ class Paypal_Settings extends PageCarton_Settings
 		$form->oneFieldSetAtATime = true;
 		$fieldset = new Ayoola_Form_Element;
 
-		$fieldset->addElement( array( 'name' => 'secret_key', 'placeholder' => 'Your Paypal secret key' ,  'label' => 'Secret key', 'value' => @$settings['notification_email_address'], 'type' => 'InputText' ) );
+		$fieldset->addElement( array( 'name' => 'notification_email', 'placeholder' => 'john.doe@example.com' ,  'label' => 'Notification email address', 'value' => @$settings['notification_email'], 'type' => 'InputText' ) );
+		$fieldset->addElement( array( 'name' => 'secret_key', 'placeholder' => 'Your Paypal secret key' ,  'label' => 'Secret key', 'value' => @$settings['secret_key'], 'type' => 'InputText' ) );
 		$fieldset->addElement( array( 'name' => 'currency', 'placeholder' => 'NGN' , 'label' => 'Default currency', 'value' => @$settings['currency'], 'type' => 'InputText' ) );
 		$fieldset->addElement( array( 'name' => 'client_id', 'label' => 'Your Paypal client ID', 'value' => @$settings['client_id'], 'type' => 'InputText' ) );
 		$fieldset->addLegend( 'Paypal Settings' );
 
 		$form->addFieldset( $fieldset );
 		$this->setForm( $form );
-		//		$form->addFieldset( $fieldset );
-	//	$this->setForm( $form );
+		//	$form->addFieldset( $fieldset );
+		//	$this->setForm( $form );
     }
 	// END OF CLASS
 }
