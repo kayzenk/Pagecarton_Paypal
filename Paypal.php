@@ -12,8 +12,8 @@
  * @version    $Id: Paypal.php Monday 6th of April 2020 05:22PM kayzenk@gmail.com $
  */
 
-  /** @var Type $var description */
-  public $_version = 1.0;
+ 
+
 
 /**
  * @see PageCarton_Widget
@@ -21,6 +21,8 @@
  require_once 'Application/User/Abstract.php';
 class Paypal_Paypal  extends Application_Subscription_Checkout_Abstract_HtmlForm
 {
-	
+	 /** @var Type $var description */
+   public $_version = '1.0';
+   
 	// END OF CLASS
 }
