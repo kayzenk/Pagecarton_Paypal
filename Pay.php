@@ -19,12 +19,6 @@
 class Paypal_Pay extends Paypal_Paypal
 {
 
-	/**
-	 * Whitelist and blacklist of currencies
-	 *
-	 * @var array
-	 */
-	protected static $_currency= array( 'whitelist' => '₦,NGN', 'blacklist' => 'ALL' );
 
 	/**
 	 * Form Action
