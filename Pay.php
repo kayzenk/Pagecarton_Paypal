@@ -81,7 +81,7 @@ class Paypal_Pay extends Paypal_Paypal
 
 		$this->setViewContent( '
 								<div id="paypal-button-container"></div>
-								<script src="https://www.paypal.com/sdk/js?client-id=ASD5Em1h1fmMoSM-LI8LiKz0Qu7STNfRSYRZYr6v_F3klJwXyrF9N_0BQJvs59bQrZyXX5bWm33MsdeJ&currency=USD">
+								<script src="https://www.paypal.com/sdk/js?client-id='.$parameters['client_id'].'&currency='.$parameters['currency'].'">
 									</script>
 									<script>
 								  paypal.Buttons({
@@ -140,7 +140,10 @@ class Paypal_Pay extends Paypal_Paypal
 		//		$counter++;
 			}
 
-			$secretKey = Application_Settings_Abstract::getSettings( 'paypal', 'secret_key' );
+			$secretKey = Paypal_Settings::retrieve( 'secret_key' );
+
+			var_Export( $secretKey );
+
 			$result = array();
 
 			//The parameter after verify/ is the transaction reference to be verified
